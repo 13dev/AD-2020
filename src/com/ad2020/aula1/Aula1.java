@@ -20,8 +20,7 @@ public class Aula1 {
     }
 
     public void calcCelcius(int temp) {
-        float celsius = (temp - 32) * 5 / 9;
-        System.out.println(temp + " Fahrenheit - " + celsius + " celsius");
+        System.out.println(temp + " Fahrenheit - " + (temp - 32) * 5 / 9 + " celsius");
     }
 
     public static void time(String time1, String time2) {
