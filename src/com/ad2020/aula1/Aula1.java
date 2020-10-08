@@ -4,6 +4,8 @@ public class Aula1 {
 
     private int[] nums = {1, 2, 3, 4, 5};
 
+    public static int MAX_INT = 2147483647;
+
     public void helloWorld() {
         System.out.println("Hello, World");
     }
@@ -33,6 +35,38 @@ public class Aula1 {
         }
 
         System.out.println((time[0] * 60 * 60) + time[1] * 60 + time[2]);
+    }
+
+    public int maxNums() {
+        int max = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+        }
+
+        return max;
+    }
+
+    public int minNums() {
+        int min = MAX_INT;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < min) {
+                min = nums[i];
+            }
+        }
+
+        return min;
+    }
+
+    public int mediumNums()
+    {
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+        }
+
+        return sum / nums.length;
     }
 
 
