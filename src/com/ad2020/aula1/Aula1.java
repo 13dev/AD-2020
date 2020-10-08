@@ -11,17 +11,17 @@ public class Aula1 {
     }
 
 
-    public void calcPerimetro(int width, int length) {
+    public void getPerimeter(int width, int length) {
         int perimetro = 2 * (width + length);
         System.out.println("O perimetro é: " + perimetro);
     }
 
-    public void calcVolume(int length, int width, int height) {
+    public void getVolume(int length, int width, int height) {
         int volume = width * length * height;
         System.out.println("O volume é: " + volume);
     }
 
-    public void calcCelcius(int temp) {
+    public void getCelcius(int temp) {
         System.out.println(temp + " Fahrenheit - " + (temp - 32) * 5 / 9 + " celsius");
     }
 
@@ -37,7 +37,7 @@ public class Aula1 {
         System.out.println((time[0] * 60 * 60) + time[1] * 60 + time[2]);
     }
 
-    public int maxNums() {
+    public int getMaxNums() {
         int max = -1;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > max) {
@@ -48,7 +48,7 @@ public class Aula1 {
         return max;
     }
 
-    public int minNums() {
+    public int getMinNums() {
         int min = MAX_INT;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] < min) {
@@ -59,7 +59,7 @@ public class Aula1 {
         return min;
     }
 
-    public int mediumNums()
+    public int getMediumNums()
     {
         int sum = 0;
         for (int i = 0; i < nums.length; i++) {
