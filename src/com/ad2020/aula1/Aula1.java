@@ -22,9 +22,9 @@ public class Aula1 {
         System.out.println(temp + " Fahrenheit - " + celsius + " celsius");
     }
 
-    public static void Tempo(String t1, String t2) {
-        String[] temp1 = t1.split(":");
-        String[] temp2 = t2.split( ":");
+    public static void Tempo(String time1, String time2) {
+        String[] temp1 = time1.split(":");
+        String[] temp2 = time2.split( ":");
 
         int[] time = new int[3];
         for (int i = 0; i < temp1.length; i++) {
