@@ -16,8 +16,14 @@ public class Main {
         System.out.println(aula1.getMediumNums());
     }
 
+    public static void aula2(String[] args)
+    {
+        com.ad2020.aula2.Main.main(args);
+    }
+
     public static void main(String[] args) {
-        aula1();
+        //aula1();
+        aula2(args);
     }
 
 
