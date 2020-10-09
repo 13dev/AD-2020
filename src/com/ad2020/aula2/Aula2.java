@@ -3,6 +3,7 @@ package com.ad2020.aula2;
 
 public class Aula2 {
 
+    //1
     public static int powerOf(int a, int b) {
         int result = 1;
         for (int i = 0; i < b; i++) {
@@ -53,18 +54,17 @@ public class Aula2 {
     }
 
     //6
-    public static void isPrime(int n1) {
-        int result = 0;
-        for (int i = 1; i <= n1; i++) {
-            if (n1 % i == 0) {
-                result++;
-            }
+    // primo 2 divisores por 1 e si propio
+    public static boolean isPrime(int num) {
+        // num factores
+        int nums = 0;
+
+        for(int i = 1; i <= num; i++){
+            if(num % i == 0) nums++;
         }
-        if (result == 2) {
-            System.out.println("Numero é primo");
-        } else {
-            System.out.println("Number não é primo");
-        }
+
+        return nums == 2;
+
     }
 
     //7
@@ -160,18 +160,20 @@ public class Aula2 {
     public static int[] remove(int[] data, int n) {
         int quant = 0;
         int pos = 0;
-
         for (int num : data) {
             if (num == n) {
                 quant++;
             }
         }
+
         int[] newNum = new int[data.length - quant];
+
         for (int num : data) {
             if (num != n) {
                 newNum[pos++] = num;
             }
         }
+
         return newNum;
     }
 }
