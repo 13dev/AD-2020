@@ -32,7 +32,7 @@ public class NumericalUtilities {
     }
 
     //4
-    public static int sumOfEvenNumbersBetween (int n1, int n2) {
+    public static int sumOfEvenNumbersBetween(int n1, int n2) {
         int result = 0;
         for (int i = n1; i <= n2; i++) {
             if (i % 2 == 0) {
@@ -59,8 +59,8 @@ public class NumericalUtilities {
         // num factores
         int nums = 0;
 
-        for(int i = 1; i <= num; i++){
-            if(num % i == 0) nums++;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) nums++;
         }
 
         return nums == 2;
