@@ -8,10 +8,10 @@ public class ArrayUtilities {
         StringBuilder result = new StringBuilder();
 
         for (int numero : data) {
-            result.append(numero).append(",");
+            result.append(numero).append(", ");
         }
 
-        return result.toString();
+        return result.substring(0, result.length() - 2);
     }
 
 

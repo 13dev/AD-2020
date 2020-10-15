@@ -23,7 +23,7 @@ public class Main {
         int exercise5 = NumericalUtilities.numberOfDivisorsOf(10);
         System.out.println(exercise5);
 
-        boolean exercise6 = NumericalUtilities.isPrime(4);
+        boolean exercise6 = NumericalUtilities.isPrime(1);
         System.out.println("primo - " + (exercise6 ? "sim" : "nao"));
 
         String exercise7 = ArrayUtilities.toString(nums);
