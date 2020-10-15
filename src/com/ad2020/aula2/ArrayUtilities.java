@@ -3,7 +3,6 @@ package com.ad2020.aula2;
 
 public class ArrayUtilities {
 
-
     public static String toString(int[] data) {
         StringBuilder result = new StringBuilder();
 
