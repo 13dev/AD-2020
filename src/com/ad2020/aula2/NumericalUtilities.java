@@ -57,13 +57,15 @@ public class NumericalUtilities {
     // primo 2 divisores por 1 e si propio
     public static boolean isPrime(int num) {
         // num factores
-        int nums = 0;
+        return numberOfDivisorsOf(num) == 2;
 
-        for (int i = 1; i <= num; i++) {
-            if (num % i == 0) nums++;
-        }
-
-        return nums == 2;
+//        int nums = 0;
+//
+//        for (int i = 1; i <= num; i++) {
+//            if (num % i == 0) nums++;
+//        }
+//
+//        return nums == 2;
 
     }
 
