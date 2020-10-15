@@ -4,7 +4,7 @@ public class Aula1 {
 
     private int[] nums = {1, 2, 3, 4, 5};
 
-    public static int MAX_INT = 2147483647;
+    public static final int MAX_INT = 2147483647;
 
     public void helloWorld() {
         System.out.println("Hello, World");
