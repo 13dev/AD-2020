@@ -69,16 +69,14 @@ public class ArrayUtilities {
 
 
     public static int indexOf(int[] data, int n) {
-        int index = 0;
+
         for (int i = 0; i < data.length; i++) {
             if (n == data[i]) {
-                index = i;
-                break;
+                return i;
             }
-
-            index = -1;
         }
-        return index;
+
+        return -1;
     }
 
 
