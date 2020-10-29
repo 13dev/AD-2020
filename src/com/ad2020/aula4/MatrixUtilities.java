@@ -60,10 +60,10 @@ public class MatrixUtilities {
         return result;
     }
 
-    public static int getLineLength(int[][] verificar) {
+    public static int getLineLength(int[][] verify) {
         int count = 0;
         int temp = 0;
-        for (int[] ints : verificar) {
+        for (int[] ints : verify) {
             if (count > temp) {
                 temp = count;
             }
@@ -75,9 +75,9 @@ public class MatrixUtilities {
         return count;
     }
 
-    public static boolean areCompatibleForSum(int[][] valores1, int[][] valores2) {
-        return getLineLength(valores1) == getLineLength(valores2)
-                && valores1.length == valores2.length;
+    public static boolean areCompatibleForSum(int[][] dataOne, int[][] dataTwo) {
+        return getLineLength(dataOne) == getLineLength(dataTwo)
+                && dataOne.length == dataTwo.length;
     }
 
     public static int[][] sumOf(int[][] dataOne, int[][] dataTwo) {
