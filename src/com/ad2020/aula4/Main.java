@@ -1,8 +1,6 @@
 package com.ad2020.aula4;
 // Created by 13dev - 29/10/2020
 
-import java.util.Arrays;
-
 public class Main {
 
     private static void problem() {
@@ -46,7 +44,9 @@ public class Main {
         CharacterDrawingUtilities.drawNewLine();
         CharacterDrawingUtilities.drawHorizontalSegmentWith('a');
         System.out.println();
+        System.out.println();
         CharacterDrawingUtilities.drawFilledRectangelWith(10, 10, '+');
+        System.out.println();
         CharacterDrawingUtilities.drawEmptyRectangleWith(10, 10, '+');
     }
 }
