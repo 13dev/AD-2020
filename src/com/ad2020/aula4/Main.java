@@ -17,28 +17,28 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int[][] matriz1 = {
+        int[][] matrixOne = {
                 {1, 0, 0},
                 {0, 1, 0},
                 {0, 0, 1}
         };
-        int[][] matriz2 = {
+        int[][] matrixTwo = {
                 {1, 1, 2},
                 {5, 1, 3},
-                {1, 3, 3}
+                {1, 3, 3, 5}
         };
 
-        System.out.println(MatrixUtilities.show(matriz1));
+        System.out.println(MatrixUtilities.show(matrixOne));
 
-        System.out.println(MatrixUtilities.isMatrix(matriz2));
-        System.out.println(MatrixUtilities.isIdentity(matriz1));
-        int[][] matrix3 = MatrixUtilities.multiplyBy(matriz2, 2);
+        System.out.println(MatrixUtilities.isMatrix(matrixTwo));
+        System.out.println(MatrixUtilities.isIdentity(matrixOne));
+        int[][] matrix3 = MatrixUtilities.multiplyBy(matrixTwo, 2);
 
         System.out.println(MatrixUtilities.show(matrix3));
 
 
-        System.out.println(MatrixUtilities.areCompatibleForSum(matriz1, matriz2));
-        System.out.println(MatrixUtilities.show(MatrixUtilities.sumOf(matriz1, matriz2)));
+        System.out.println(MatrixUtilities.areCompatibleForSum(matrixOne, matrixTwo));
+        System.out.println(MatrixUtilities.show(MatrixUtilities.sumOf(matrixOne, matrixTwo)));
 
         CharacterDrawingUtilities.drawElement('+');
         CharacterDrawingUtilities.drawNewLine();

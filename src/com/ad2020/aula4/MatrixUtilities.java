@@ -53,6 +53,8 @@ public class MatrixUtilities {
     public static int[][] multiplyBy(int[][] matrix, int multiplyBy) {
         int[][] result = new int[matrix.length][matrix[0].length];
 
+        if(!isMatrix(matrix)) return matrix;
+
         for (int i = 0; i < matrix.length; i++) {
             for (int x = 0; x < matrix[i].length; x++) {
                 result[i][x] = matrix[i][x] * multiplyBy;
