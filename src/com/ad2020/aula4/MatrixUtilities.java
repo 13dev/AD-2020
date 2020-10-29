@@ -62,35 +62,18 @@ public class MatrixUtilities {
         return result;
     }
 
-    public static int getLineLength(int[][] matrix) {
-        int count = 0;
-        int temp = 0;
-        for (int[] line : matrix) {
-            if (count > temp) {
-                temp = count;
-            }
-
-            count = 0;
-            for (int x = 0; x < line.length; x++) {
-                count++;
-            }
-        }
-        return count;
+    public static boolean areCompatibleForSum(int[][] matrixOne, int[][] matrixTwo) {
+        return isMatrix(matrixOne) && isMatrix(matrixTwo);
     }
 
-    public static boolean areCompatibleForSum(int[][] dataOne, int[][] dataTwo) {
-        return getLineLength(dataOne) == getLineLength(dataTwo)
-                && dataOne.length == dataTwo.length;
-    }
+    public static int[][] sumOf(int[][] matrixOne, int[][] matrixTwo) {
 
-    public static int[][] sumOf(int[][] dataOne, int[][] dataTwo) {
+        int[][] result = new int[matrixOne.length][matrixOne[0].length];
 
-        int[][] result = new int[dataOne.length][dataOne[0].length];
-
-        if (areCompatibleForSum(dataOne, dataTwo)) {
-            for (int i = 0; i < dataOne.length; i++) {
-                for (int x = 0; x < dataOne.length; x++) {
-                    result[i][x] = dataOne[i][x] + dataTwo[i][x];
+        if (areCompatibleForSum(matrixOne, matrixTwo)) {
+            for (int i = 0; i < matrixOne.length; i++) {
+                for (int x = 0; x < matrixOne.length; x++) {
+                    result[i][x] = matrixOne[i][x] + matrixTwo[i][x];
                 }
             }
         }

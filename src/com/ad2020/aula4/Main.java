@@ -30,23 +30,17 @@ public class Main {
                 {1, 3, 3}
         };
 
-        int[][] matrizIntenty = {
-                {1, 0, 0},
-                {0, 1, 0},
-                {0, 0, 1}
-        };
-
         System.out.println(MatrixUtilities.show(matriz1));
 
         System.out.println(MatrixUtilities.isMatrix(matriz2));
-        System.out.println(MatrixUtilities.isIdentity(matrizIntenty));
+        System.out.println(MatrixUtilities.isIdentity(matriz1));
         int[][] matrix3 = MatrixUtilities.multiplyBy(matriz2, 2);
 
         System.out.println(MatrixUtilities.show(matrix3));
 
 
         System.out.println(MatrixUtilities.areCompatibleForSum(matriz1, matriz2));
-        System.out.println(Arrays.deepToString(MatrixUtilities.sumOf(matriz1, matriz2)));
+        System.out.println(MatrixUtilities.show(MatrixUtilities.sumOf(matriz1, matriz2)));
 
         CharacterDrawingUtilities.drawElement('+');
         CharacterDrawingUtilities.drawNewLine();
