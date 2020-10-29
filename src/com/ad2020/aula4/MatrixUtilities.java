@@ -2,73 +2,76 @@ package com.ad2020.aula4;
 // Created by 13dev - 29/10/2020
 
 public class MatrixUtilities {
-    public static void show(int[][] data) {
+    public static String show(int[][] data) {
+        StringBuilder buffer = new StringBuilder();
         for (int[] datum : data) {
-            System.out.print("[ ");
+            buffer.append("[ ");
             for (int j = 0; j < data.length; j++) {
-                System.out.print(datum[j] + " ");
+                buffer.append(datum[j]).append(" ");
             }
-            System.out.print("]");
-            System.out.println();
+            buffer.append("]");
+            buffer.append("\n");
         }
+
+        return buffer.toString();
     }
 
-    public static boolean isMatrix(int[][] verificar) {
-        int numCol = verificar.length;
+    public static boolean isMatrix(int[][] matrix) {
+        int numCol = matrix.length;
         int lastIndex = 0;
-        for (int i = 1; i < verificar.length; i++) {
-            if (verificar[i].length != verificar[i - 1].length) {
+        for (int i = 1; i < matrix.length; i++) {
+            if (matrix[i].length != matrix[i - 1].length) {
                 return false;
             }
 
             lastIndex = i;
         }
 
-        return numCol == verificar[lastIndex].length;
+        return numCol == matrix[lastIndex].length;
     }
 
-    public static boolean isIdentity(int[][] verificar) {
-        int count = 0;
-        int contInvalids = 0;
-        for (int i = 0; i < verificar.length; i++) {
-            for (int x = 0; x < verificar[i].length; x++) {
-                if (x == i) {
-                    if (verificar[i][x] == 1) {
-                        count += 1;
-                    }
-                } else {
-                    if (verificar[i][x] != 0) {
-                        contInvalids += 1;
-                    }
-                }
-            }
-        }
-        if (contInvalids != 0) {
+    public static boolean isIdentity(int[][] matrix) {
+        if (matrix.length != matrix[0].length) {
             return false;
         }
 
-        return count == verificar.length || count == verificar[0].length;
-    }
+        for (int i = 0; i < matrix.length; i++) {
+            for (int x = 0; x < matrix[i].length; x++) {
+                if (i == x && matrix[i][x] != 1) {
+                    return false;
+                }
+                if (i != x && matrix[i][x] != 0) {
+                   return false;
+                }
 
-    public static int[][] multiplyBy(int[][] valores, int mult) {
-        int[][] result = new int[valores.length][valores[0].length];
-        for (int i = 0; i < valores.length; i++) {
-            for (int x = 0; x < valores[i].length; x++) {
-                result[i][x] = valores[i][x] * mult;
             }
         }
+
+        return true;
+    }
+
+    public static int[][] multiplyBy(int[][] matrix, int multiplyBy) {
+        int[][] result = new int[matrix.length][matrix[0].length];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int x = 0; x < matrix[i].length; x++) {
+                result[i][x] = matrix[i][x] * multiplyBy;
+            }
+        }
+
         return result;
     }
 
-    public static int getLineLength(int[][] verify) {
+    public static int getLineLength(int[][] matrix) {
         int count = 0;
         int temp = 0;
-        for (int[] ints : verify) {
+        for (int[] line : matrix) {
             if (count > temp) {
                 temp = count;
             }
+
             count = 0;
-            for (int x = 0; x < ints.length; x++) {
+            for (int x = 0; x < line.length; x++) {
                 count++;
             }
         }
