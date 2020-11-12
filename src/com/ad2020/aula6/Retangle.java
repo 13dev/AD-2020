@@ -1,6 +1,8 @@
-package com.ad2020.aula5;
+package com.ad2020.aula6;
 
-public class Retangle {
+import com.ad2020.aula5.Point;
+
+public class Retangle extends Shape {
 
     public Point topLeftPoint;
 
@@ -43,13 +45,6 @@ public class Retangle {
         this.width = width;
     }
 
-    public double calcArea() {
-        return Math.round(height * width);
-    }
-
-    public double calcPerimeter() {
-        return Math.round((width + height) * 2);
-    }
 
     public boolean contains(Point point) {
         double point1 = topLeftPoint.getX() + width;
@@ -66,6 +61,15 @@ public class Retangle {
         return true;
 
 
+    }
 
+    @Override
+    double getArea() {
+        return Math.round(height * width);
+    }
+
+    @Override
+    double getPerimeter() {
+        return Math.round((width + height) * 2);
     }
 }
