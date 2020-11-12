@@ -9,12 +9,14 @@ public class Triangle extends Shape {
     public Point c;
 
     public Triangle(Point a, Point b, Point c) {
+        super(a);
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
     public Triangle() {
+        super(null);
         this.a = null;
         this.b = null;
         this.c = null;
@@ -66,5 +68,14 @@ public class Triangle extends Shape {
     @Override
     double getPerimeter() {
         return a.distance(b) + b.distance(c) + c.distance(a);
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "a=" + a +
+                ", b=" + b +
+                ", c=" + c +
+                "} " + super.toString();
     }
 }

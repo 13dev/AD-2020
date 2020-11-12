@@ -9,6 +9,10 @@ public abstract class Shape {
 
     abstract double getPerimeter();
 
+    public Shape(Point position) {
+        this.position = position;
+    }
+
     Point getPosition() {
         return position;
     }

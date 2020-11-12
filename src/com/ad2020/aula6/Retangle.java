@@ -10,12 +10,14 @@ public class Retangle extends Shape {
     public double width;
 
     public Retangle(Point topLeftPoint, double height, double width) {
+        super(topLeftPoint);
         this.topLeftPoint = topLeftPoint;
         this.height = height;
         this.width = width;
     }
 
     public Retangle() {
+        super(null);
         this.topLeftPoint = null;
         this.height = 0;
         this.width = 0;
@@ -71,5 +73,14 @@ public class Retangle extends Shape {
     @Override
     double getPerimeter() {
         return Math.round((width + height) * 2);
+    }
+
+    @Override
+    public String toString() {
+        return "Retangle{" +
+                "topLeftPoint=" + topLeftPoint +
+                ", height=" + height +
+                ", width=" + width +
+                "} " + super.toString();
     }
 }
