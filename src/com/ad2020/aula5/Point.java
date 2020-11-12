@@ -41,4 +41,12 @@ public class Point {
                 Math.pow(point1.getX() - this.x, 2) + Math.pow(point1.getY() - this.y, 2)
         );
     }
+
+    @Override
+    public String toString() {
+        return "Point{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }

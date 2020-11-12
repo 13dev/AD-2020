@@ -23,6 +23,8 @@ public class Main {
         System.out.println(car);
         System.out.println(motorcycle);
         System.out.println(circle);
-        System.out.println(figure);
+
+        System.out.println(circle.getPerimeter());
+        System.out.println(figure.getShapes());
     }
 }
