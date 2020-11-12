@@ -14,11 +14,9 @@ public class Main {
         Motorcycle motorcycle = new Motorcycle(2001, "Tesla", "Model Moto", 29.99, "blue");
         Circle circle = new Circle(20);
 
-        ArrayList<Shape> shapes = new ArrayList<>();
-        shapes.add(new Retangle(new Point(1,2), 10,  20));
-        shapes.add(new Triangle(new Point(1,2), new Point(2,3), new Point(4,5)));
-
-        Figure figure = new Figure(shapes);
+        Figure figure = new Figure();
+        figure.addShape(new Retangle(new Point(1,2), 10,  20));
+        figure.addShape(new Triangle(new Point(1,2), new Point(2,3), new Point(4,5)));
 
         System.out.println(car);
         System.out.println(motorcycle);

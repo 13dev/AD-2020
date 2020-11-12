@@ -17,6 +17,10 @@ public class Figure {
         return shapes;
     }
 
+    public void addShape(Shape shape) {
+        shapes.add(shape);
+    }
+
     public void setShapes(ArrayList<Shape> shapes) {
         this.shapes = shapes;
     }
