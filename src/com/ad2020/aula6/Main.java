@@ -15,8 +15,14 @@ public class Main {
         Circle circle = new Circle(20);
 
         Figure figure = new Figure();
-        figure.addShape(new Retangle(new Point(1,2), 10,  20));
-        figure.addShape(new Triangle(new Point(1,2), new Point(2,3), new Point(4,5)));
+        figure.addShape(new Retangle(new Point(1,2), 10, 20));
+        figure.addShape(
+                new Triangle(
+                    new Point(1,2),
+                    new Point(2,3),
+                    new Point(4,5)
+                )
+        );
 
         System.out.println(car);
         System.out.println(motorcycle);
